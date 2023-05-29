@@ -22,7 +22,11 @@ import java.util.List;
 public class CategoryResource {
     private final Logger log = LoggerFactory.getLogger(CategoryResource.class);
 
-    //    @Autowired //@Autowired annotation is used for dependency injection.In spring boot application, all loaded beans are eligible for auto wiring to another bean. The annotation @Autowired in spring boot is used to auto-wire a bean into another bean.
+    //@Autowired //@Autowired annotation is used for dependency injection.
+    // In spring boot application, all loaded beans are eligible for
+    // auto wiring to another bean.
+    //The annotation @Autowired in spring boot is used to auto-wire a bean
+    // into another bean. see https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring
     private CategoryService categoryService; //the use of interface rather than class is important for loose coupling
 
     // Constructor based  injection
@@ -43,8 +47,12 @@ public class CategoryResource {
 
     /**
      * When Spring Boot finds an argument annotated with @Valid,
-     * it automatically bootstraps the default JSR 380 implementation — Hibernate Validator — and
-     * validates the argument. When the target argument fails to pass the validation,
+     * it automatically bootstraps the default JSR 380 implementation — Hibernate Validator —
+     * and validates the argument (JSR 380 is a specification of the Java API
+     * for bean validation, part of Jakarta EE and JavaSE.
+     * This ensures that the properties of a bean meet specific criteria,
+     * using annotations such as @NotNull, @Min, and @Max.; <dependency>     <groupId>org.hibernate.validator</groupId>     <artifactId>hibernate-validator</artifactId>     <version>8.0.0.Final</version> </dependency>).
+     * When the target argument fails to pass the validation,
      * Spring Boot throws a MethodArgumentNotValidException exception.
      *
      * @param categoryDto

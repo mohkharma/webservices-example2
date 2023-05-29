@@ -12,8 +12,10 @@ import java.util.stream.Collectors;
 
 /**
  * It is used to mark the class as a service provider.
- * So overall @Service annotation is used with classes that provide some business functionalities.
- * Spring context will autodetect these classes when annotation-based configuration and classpath scanning is used
+ * So overall @Service annotation is used with classes that provide some
+ * business functionalities.
+ * Spring context will autodetect these classes when annotation-based
+ * configuration and classpath scanning is used
  * Author: Mohammed Kharma
  */
 @Service //To enable this class for component scanning
