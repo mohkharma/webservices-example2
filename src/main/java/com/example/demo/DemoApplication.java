@@ -28,7 +28,8 @@ public class DemoApplication {
 
 	/**
 	 * a bean exploits the Inversion of Control feature by which an object defines its dependencies without creating them
-	 * Spring @Bean annotation tells that a method produces a bean to be managed by the Spring container.
+	 * Spring @Bean annotation tells that a method produces a bean
+	 * to be managed by the Spring container.
 	 *
 	 * @return RestTemplate instance
 	 * @Bean is a method-level annotation and a direct analog of the XML <bean/> element.

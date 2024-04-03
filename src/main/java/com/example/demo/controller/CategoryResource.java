@@ -45,13 +45,16 @@ public class CategoryResource {
         return ResponseEntity.ok(categoryService.getCategoryById(id));
     }
 
+
     /**
      * When Spring Boot finds an argument annotated with @Valid,
      * it automatically bootstraps the default JSR 380 implementation — Hibernate Validator —
      * and validates the argument (JSR 380 is a specification of the Java API
      * for bean validation, part of Jakarta EE and JavaSE.
      * This ensures that the properties of a bean meet specific criteria,
-     * using annotations such as @NotNull, @Min, and @Max.; <dependency>     <groupId>org.hibernate.validator</groupId>     <artifactId>hibernate-validator</artifactId>     <version>8.0.0.Final</version> </dependency>).
+     * using annotations such as @NotNull, @Min, and @Max.;
+     * <dependency>     <groupId>org.hibernate.validator</groupId>
+     * <artifactId>hibernate-validator</artifactId>     <version>8.0.0.Final</version> </dependency>).
      * When the target argument fails to pass the validation,
      * Spring Boot throws a MethodArgumentNotValidException exception.
      *
