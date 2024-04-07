@@ -33,4 +33,5 @@ public class Address implements Serializable {
     private Long id;
 
     private String streetAddress;
+
 }

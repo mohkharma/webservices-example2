@@ -69,6 +69,11 @@ public class CategoryResource {
             throw new BadRequestException(CategoryResource.class.getSimpleName(),
                     "Id");
         }
+        if (categoryDto.getName() ==null) {
+            log.error("Cannot have an name {}", categoryDto);
+            throw new BadRequestException(CategoryResource.class.getSimpleName(),
+                    "Name");
+        }
         return new ResponseEntity(categoryService.createCategory(categoryDto), HttpStatus.CREATED);
     }
 

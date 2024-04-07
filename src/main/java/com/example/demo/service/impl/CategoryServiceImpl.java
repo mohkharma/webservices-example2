@@ -5,6 +5,7 @@ import com.example.demo.entity.Category;
 import com.example.demo.exception.ResourceNotFoundException;
 import com.example.demo.repository.CategoryRepository;
 import com.example.demo.service.CategoryService;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
  * Author: Mohammed Kharma
  */
 @Service //To enable this class for component scanning
+
 public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;

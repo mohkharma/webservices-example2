@@ -33,7 +33,7 @@ public class CustomerController {
         return customerList;
     }
 
-    @GetMapping(value = "/student/V2")
+    @GetMapping(value = "/V2/student")
     public ResponseEntity<CustomerDto> getSCustomerV2() {
         return ResponseEntity.ok(new CustomerDto("Mohammed", "Ahmad"));
     }

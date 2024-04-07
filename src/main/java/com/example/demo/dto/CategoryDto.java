@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import jakarta.validation.constraints.NotNull;
@@ -21,9 +22,11 @@ public class CategoryDto {
 
     private String description;
 
+    @JsonIgnore
     private String CreatedBy;
 
+    @JsonIgnore
     private Boolean isActive;
-
+    @JsonIgnore
     private Date CreationDate;
 }
